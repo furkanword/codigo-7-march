@@ -1,0 +1,41 @@
+const barcelona = 1000000
+const madrid = 200000
+const valencia = 300000
+let salida = ''
+let entrada = false
+let viajes = parseInt(
+ prompt('Para donde Deseas el pasaje ?\n1.Barcelona\n2.Madrid\n3.Valencia:)')
+)
+
+while (entrada == false) {
+ if (viajes == 1) {
+  alert(
+   `El pasaje tiene el valor ${
+    barcelona * 0.95
+   } y se te aplico un descuento de ${madrid * 0.05} pesos `
+  )
+  break
+ } else if (viajes == 2) {
+  alert(
+   `El pasaje tiene el valor ${madrid * 0.9} y se te hizo un descuent de ${
+    madrid * 0.1
+   } pesos`
+  )
+  break
+ } else if (viajes == 3) {
+  alert(
+   `El pasaje tiene el valor ${valencia * 0.85} y se te hizo un descuento de ${
+    valencia * 0.15
+   }pesos`
+  )
+  break
+ } else {
+  alert('Por favor ingrese un valor valido')
+ }
+ salida = prompt('si deseas comprar otro tiquete preciona (S) y si no (N)')
+ if (salida == 'S') {
+  entrada = false
+ } else {
+  entrada = true
+ }
+}
